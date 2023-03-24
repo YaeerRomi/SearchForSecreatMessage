@@ -1,0 +1,44 @@
+Main lists/variables/constants:
+
+    matrix: 2D list to store the letter matrix from the text file.
+    matrixF: The text file to read the matrix from.
+    steps: 1D list to store the steps from the steps file.
+    stepF: The steps file to read the steps from.
+    fLetterPos: 1D list to store the positions of the first letters in the matrix.
+    firstLetters: String to store the given input letters.
+
+----------------------------------------------------------------
+Main algorithm steps:
+    2.1. Read the letter matrix from the text file and store it in 'matrix'.
+    2.2. Read the steps from the steps file and store them in 'steps'.
+    2.3. Find the positions of the first letters in the matrix and store them in 'fLetterPos'.
+    2.4. Check if the first letters are found in the matrix.
+    2.5. If found, loop through the positions of the first letters and create a message starting with the first letter.
+    2.6. Loop through the steps, calculate the next position and letter, and add the next letter to the message.
+    2.7. If the message starts with the given first letters, return the message as the secret word.
+    2.8. If the secret word is not found, return an error message.
+
+Additional considerations:
+    Wrapping around edges: Use modulo operation to wrap around the edges of the matrix when calculating the next position.
+    Work with any length input string and any test case, including those with multiple paths.
+
+High-level pseudo-code:
+    Define the findMessage class.
+        1.1. Initialize the class with textF, stepsF, and letters.
+        1.2. Read the letter matrix from the text file.
+        1.3. Read the steps from the steps file.
+        1.4. Find the positions of the first letters in the matrix.
+    Define a method to find the combination of letters.
+        2.1. Loop through the positions of the first letters.
+        2.2. Create a message starting with the first letter.
+        2.3. Loop through the steps, calculating the next position and letter.
+        2.4. Add the next letter to the message.
+        2.5. If the message starts with the given letters, return the message.
+    Define a method to extract the secret message.
+        3.1. Check if the first letters are found.
+        3.2. If found, call the method to find the combination.
+        3.3. If not found, return an error message.
+
+    Instantiate the findMessage class with the required parameters.
+    Call the extract_message method to find and display the secret message.
+    With this plan, a third party should be able to follow the entire process of message extraction. The final submission will include the updated plan and the Python code.
